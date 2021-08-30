@@ -14,7 +14,7 @@ function getWeather (event){
   event.preventDefault();
   
   $.ajax({
-    url: `http://api.openweathermap.org/data/2.5/weather?q=${$input.val()}&appid=3554d8fa0dbb83f068b51035058a2369&units=imperial`
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${$input.val()}&appid=3554d8fa0dbb83f068b51035058a2369&units=imperial`
   }).then(
     function(data){
       weatherData = data;
