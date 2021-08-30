@@ -59,20 +59,22 @@ function render() {
   else if(weatherData.main.temp <= 40){
     $adviceTemp.text("It's a cold one out there. Bundle up!")}
   else if(weatherData.main.temp <= 80 && weatherData.main.temp >= 60){
-    $adviceTemp.text("Can't ask for much better temperatures! Enjoy!")}}
-  
-$('form').on('submit', getWeather);
+    $adviceTemp.text("Can't ask for much better temperatures! Enjoy!")}
+  else if(weatherData.main.temp <= 60 && weatherData.main.temp >= 40){
+    $adviceTemp.text("Temperature isn't too bad out today.")}}
 
 function clearValues(){
-  $city.html("")
-  $temp.html("")
-  $feelsLike.html("")
-  $humidity.html("")
-  $weather.html("")
-  $weatherMoreDetail.html("")
-  $advice.html("")
-  $adviceTemp.html("")
-  $input.val("")
-}
+    $city.html("")
+    $temp.html("")
+    $feelsLike.html("")
+    $humidity.html("")
+    $weather.html("")
+    $weatherMoreDetail.html("")
+    $advice.html("")
+    $adviceTemp.html("")
+    $input.val("")
+    }
+
+$('form').on('submit', getWeather);
 
 $('#clear').on('click', clearValues)
