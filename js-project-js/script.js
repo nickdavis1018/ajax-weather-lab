@@ -30,7 +30,7 @@ function getWeather (event){
     $weatherMoreDetail.text("No match found")
     $adviceTemp.html(`Location needs to be exact. <br> '${$input.val()}' is not recognized.`)
     $advice.html("Try searching 'New York' or 'Chicago' to get a feel for it.")
-    }
+    $input.val('')}
   )
 }
 
